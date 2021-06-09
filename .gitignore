@@ -1,0 +1,37 @@
+# gitignore template for Drupal 8 projects
+#
+# earlier versions of Drupal are tracked in `community/PHP/`
+
+# Ignore configuration files that may contain sensitive information
+/apps/drupal/web/sites/*/*settings*.php
+/apps/drupal/web/sites/*/*services*.yml
+
+# Ignore paths that may contain user-generated content
+/apps/drupal/web/sites/*/files
+/apps/drupal/web/sites/*/public
+/apps/drupal/web/sites/*/private
+/apps/drupal/web/sites/*/files-public
+/apps/drupal/web/sites/*/files-private
+
+# Ignore paths that may contain temporary files
+/apps/drupal/web/sites/*/translations
+/apps/drupal/web/sites/*/tmp
+/apps/drupal/web/sites/*/cache
+
+# Ignore testing related files
+/apps/drupal/web/sites/simpletest
+
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+/apps/drupal/vendor/
+
+# Ignore drupal core (if not versioning drupal sources)
+/apps/drupal/web/core
+/apps/drupal/web/modules/contrib
+/apps/drupal/web/themes/contrib
+
+/apps/drupal/composer.lock
+/configurations/mysql/data/
+.DS_Store
